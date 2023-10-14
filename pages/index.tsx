@@ -15,13 +15,8 @@ export default function Upload() {
       >
         <h1>♥예나단장♥</h1>
         <Image
-          src={
-            "https://" +
-            process.env.NEXT_PUBLIC_BUCKET_NAME +
-            ".s3." +
-            process.env.NEXT_PUBLIC_AWS_REGION +
-            ".amazonaws.com/%EC%98%88%EB%82%98%EB%B2%A0%EB%A0%88%EB%AA%A8.jpg"
-          }
+          // src={`https://${process.env.NEXT_PUBLIC_BUCKET_NAME}.s3.${process.env.NEXT_PUBLIC_AWS_REGION}.amazonaws.com/%EC%98%88%EB%82%98%EB%B2%A0%EB%A0%88%EB%AA%A8.jpg`}
+          src={`https://yena-first.s3.ap-northeast-2.amazonaws.com/%EC%98%88%EB%82%98%EB%B2%A0%EB%A0%88%EB%AA%A8.jpg`}
           width={432}
           height={432}
         />
