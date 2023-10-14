@@ -1,7 +1,8 @@
 export default function Upload() {
   return (
     <>
-      <p>Upload a .png or .jpg image (max 1MB).</p>
+      <p>Upload a .png or .jpg image (max 100MB).</p>
+      <p>애드라 사진 좀 올려봐 100MB제한으로 수정함</p>
       <input
         onChange={uploadPhoto}
         type="file"
