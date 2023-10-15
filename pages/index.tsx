@@ -1,10 +1,12 @@
-import dbConnect from "lib/dbConnect";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Upload() {
   // 추가할만한 기능 : 사진을 업로드 하면, 기본 이미지에서 방금 올린 이미지로 대체되도록 한다.
   // useEffect와 useState 적당히 사용하면 가능할 것 같다.
+  // console.log(process.env.MONGODB_URI)
+  // console.log(process.env.NEXT_PUBLIC_MONGODB_URI)
+
   return (
     <>
       <title>♥♥</title>
@@ -16,7 +18,6 @@ export default function Upload() {
         }}
       >
         <Image
-          // src={`https://${process.env.NEXT_PUBLIC_BUCKET_NAME}.s3.${process.env.NEXT_PUBLIC_AWS_REGION}.amazonaws.com/%EC%98%88%EB%82%98%EB%B2%A0%EB%A0%88%EB%AA%A8.jpg`}
           src={`https://yena-first.s3.ap-northeast-2.amazonaws.com/%EC%98%88%EB%82%98%EB%B2%A0%EB%A0%88%EB%AA%A8.jpg`}
           width={432}
           height={432}
@@ -48,21 +49,6 @@ export default function Upload() {
           </Link>
         </div>
         <button onClick={() => console.log("눌러주세요")}>눌러주세요</button>
-        <button
-          onClick={async () => {
-            try {
-              await dbConnect();
-              console.log("MongoDB 연결");
-            } catch (err) {
-              console.error("MongoDB 연결 실패:", err);
-            }
-          }}
-        >
-          MongoDB 연결
-        </button>
-        <button onClick={() => console.log("MongoDB 연결2")}>
-          MongoDB 연결2
-        </button>
       </div>
     </>
   );
