@@ -6,7 +6,7 @@ export default function Upload() {
   // useEffect와 useState 적당히 사용하면 가능할 것 같다.
   return (
     <>
-      <title>♥아이즈원♥</title>
+      <title>♥♥</title>
       <div
         style={{
           display: "flex",
@@ -36,11 +36,14 @@ export default function Upload() {
           <Link href={`/yena.jigumina`}>
             <h1>최예나</h1>
           </Link>
-          <Link href={`/zo__glasss`}>
-            <h1>조유리</h1>
-          </Link>
           <Link href={`/_chaechae_1`}>
             <h1>김채원</h1>
+          </Link>
+          <Link href={`/imwinter`}>
+            <h1>김민정</h1>
+          </Link>
+          <Link href={`/zo__glasss`}>
+            <h1>조유리</h1>
           </Link>
         </div>
       </div>

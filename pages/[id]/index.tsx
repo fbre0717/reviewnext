@@ -38,12 +38,16 @@ export const getStaticProps: GetStaticProps = async (context) => {
       name: "Yena",
     },
     {
-      id: "zo__glasss",
-      name: "Yuri",
-    },
-    {
       id: "_chaechae_1",
       name: "Chaewon",
+    },
+    {
+      id: "imwinter",
+      name: "Winter",
+    },
+    {
+      id: "zo__glasss",
+      name: "Yuri",
     },
   ];
 
@@ -59,8 +63,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [
       { params: { id: "yena.jigumina" } },
-      { params: { id: "zo__glasss" } },
       { params: { id: "_chaechae_1" } },
+      { params: { id: "imwinter" } },
+      { params: { id: "zo__glasss" } },
     ],
     fallback: false,
   };
