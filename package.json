@@ -29,6 +29,7 @@
     "aws-cdk-lib": "2.27.0",
     "constructs": "^10.1.36",
     "eslint-config-next": "^12.1.0",
+    "mongoose": "^7.6.2",
     "source-map-support": "^0.5.21"
   }
 }

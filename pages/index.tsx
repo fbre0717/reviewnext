@@ -1,3 +1,4 @@
+import dbConnect from "lib/dbConnect";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -46,6 +47,22 @@ export default function Upload() {
             <h1>조유리</h1>
           </Link>
         </div>
+        <button onClick={() => console.log("눌러주세요")}>눌러주세요</button>
+        <button
+          onClick={async () => {
+            try {
+              await dbConnect();
+              console.log("MongoDB 연결");
+            } catch (err) {
+              console.error("MongoDB 연결 실패:", err);
+            }
+          }}
+        >
+          MongoDB 연결
+        </button>
+        <button onClick={() => console.log("MongoDB 연결2")}>
+          MongoDB 연결2
+        </button>
       </div>
     </>
   );
