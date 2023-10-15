@@ -19,6 +19,7 @@ export default function Upload() {
           src={`https://yena-first.s3.ap-northeast-2.amazonaws.com/%EC%98%88%EB%82%98%EB%B2%A0%EB%A0%88%EB%AA%A8.jpg`}
           width={432}
           height={432}
+          alt="베레모"
         />
         <br></br>
         <div style={{ border: "1px solid black", padding: "10px" }}>

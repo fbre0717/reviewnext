@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { GetStaticProps, GetStaticPaths } from "next";
 import Image from "next/image";
 
-export default function user({ user }) {
+export default function UserIndex({ user }) {
   const router = useRouter();
   const id = router.query.id as string;
   
@@ -22,6 +22,7 @@ export default function user({ user }) {
           src={`https://yena-first.s3.ap-northeast-2.amazonaws.com/${source}.jpg`}
           width={150}
           height={150}
+          alt={user.name}
         />
         <h1>{user.name}</h1>
         <h1>{id}</h1>
