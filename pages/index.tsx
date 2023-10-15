@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from 'next/router';
 
 export default function Upload() {
+  const router = useRouter();
   // 추가할만한 기능 : 사진을 업로드 하면, 기본 이미지에서 방금 올린 이미지로 대체되도록 한다.
   // useEffect와 useState 적당히 사용하면 가능할 것 같다.
   // console.log(process.env.MONGODB_URI)
@@ -67,7 +69,9 @@ export default function Upload() {
         </div>
         <button onClick={handleGet}>펫목록</button>
         <button onClick={() => console.log("눌러주세요")}>눌러주세요</button>
-        
+        <br></br>
+        <br></br>
+        <button onClick={() => router.push('/sign')}>로그인</button>
       </div>
     </>
   );
