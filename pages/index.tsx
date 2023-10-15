@@ -7,6 +7,23 @@ export default function Upload() {
   // console.log(process.env.MONGODB_URI)
   // console.log(process.env.NEXT_PUBLIC_MONGODB_URI)
 
+  const handleGet = async () => {
+    try {
+      const res = await fetch(`/api/pets/`, {
+        method: "GET",
+      });
+
+      if (!res.ok) {
+        throw new Error(res.status.toString());
+      }
+
+      const data = await res.json();
+      console.log("Successed:", data);
+    } catch (error) {
+      console.log("Failed");
+    }
+  };
+
   return (
     <>
       <title>♥♥</title>
@@ -48,7 +65,9 @@ export default function Upload() {
             <h1>조유리</h1>
           </Link>
         </div>
+        <button onClick={handleGet}>펫목록</button>
         <button onClick={() => console.log("눌러주세요")}>눌러주세요</button>
+        
       </div>
     </>
   );
